@@ -137,7 +137,7 @@ int main()
     scanf("%d %d", &new_node_value, &new_node_pos);
 
 
-    //not both insert && delete function returns 0 on success , so, that's why we using bitwise '!' (not)
+    //note both insert && delete function returns 0 on success , so, that's why we using bitwise '!' (not)
     if (!insert_at_any(new_node_value, new_node_pos)) {
         print();
         }
