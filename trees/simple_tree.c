@@ -1,4 +1,4 @@
-// implementation of binary tree [ tree creation  , transversing( inorder)] 
+// implementation of binary tree [ tree creation  , transversing( inorder) ] 
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
