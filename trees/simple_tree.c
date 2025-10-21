@@ -48,34 +48,34 @@ tree_node* insert_right_node(tree_node* parent, int key)
     return parent->right_node;
     }
 
-void create_tree( int n,tree_node* node , int height , int current_height)
+void create_tree(int n, tree_node* node, int height, int current_height)
     {
     if (current_height >= height) {
         return;
         }
-        tree_node* left_node = insert_left_node(node, n * 11);
-        tree_node* right_node = insert_right_node(left_node, n * 12);
-     n += 1;
-     create_tree(n, left_node, height, current_height + 1);
-     create_tree(n, right_node, height, current_height + 1);
-        
+    tree_node* left_node = insert_left_node(node, n * 11);
+    tree_node* right_node = insert_right_node(left_node, n * 12);
+    n += 1;
+    create_tree(n, left_node, height, current_height + 1);
+    create_tree(n, right_node, height, current_height + 1);
+
     }
 
-void print_tree(tree_node*pos)
+void print_tree(tree_node* pos)
     {
-        if (pos == NULL)
+    if (pos == NULL)
         {
-            return;
+        return;
         }
-        print_tree(pos->left_node);
-        printf("POS [%d] | Value : %d \n", pos->node_id, pos->key);
-        print_tree(pos->right_node);
+    print_tree(pos->left_node);
+    printf("POS [%d] | Value : %d \n", pos->node_id, pos->key);
+    print_tree(pos->right_node);
     }
 
 int main()
     {
     tree_root = create_node(0);
-    create_tree(10,tree_root,3,0);
+    create_tree(10, tree_root, 3, 0);
     print_tree(tree_root);
     printf("done\n");
     }
