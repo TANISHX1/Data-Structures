@@ -31,7 +31,6 @@ int main()
         printf("Stack[%d] | value : %d\n", stack_ptr - i, stack[stack_ptr - i]);
         }
     for (int i = 0;i < 5;i++) {
-
         pop();
         }
     printf("\n\n");

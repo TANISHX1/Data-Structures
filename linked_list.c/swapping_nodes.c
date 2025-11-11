@@ -75,9 +75,6 @@ void change_node(int node_id_1, int node_id_2)
         {
         head = node_1_curr;
         }
-
-
-
     }
 
 int main()
