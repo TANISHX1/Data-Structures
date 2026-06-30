@@ -1,6 +1,6 @@
 # Data Structures
 
-Implementations of classic data structures in **C** with a partial **Go reimplementation**.
+Implementations of classic data structures in **C/C++** with a partial **Go reimplementation**.
 
 ---
 
@@ -8,17 +8,37 @@ Implementations of classic data structures in **C** with a partial **Go reimplem
 
 ```
 Data-Structures/
-├── ptr_arithmatic.c          # Pointer arithmetic demo
-├── linked_list.c/             # Linked list implementations (C)
-├── stack_Queue/               # Stack & Queue implementations (C)
-├── trees/                     # Tree data structures (C)
-├── sorting/                   # Sorting algorithms (C)
-└── go reimplementation/       # Go reimplementation of selected structures
+├── ptr_arithmatic.c              # Pointer arithmetic demo
+├── c_string_manipulation/         # C string library demos (C++)
+├── linked_list.c/                 # Linked list implementations (C)
+├── stack_Queue/                   # Stack & Queue implementations (C)
+├── trees/                         # Tree data structures (C)
+├── sorting/                       # Sorting algorithms (C)
+└── go reimplementation/           # Go reimplementation of selected structures
+    ├── color/                      #   ANSI color constants
+    ├── linkedlist/                 #   Linked list implementations
+    └── stack_queue/                #   Stack & Queue implementations
 ```
 
 ---
 
 ## C Implementations
+
+### `c_string_manipulation/` — C String Functions
+
+Demos of the C string manipulation library (`<cstring>`), written in C++.
+
+| File | Function(s) | Description |
+|---|---|---|
+| `strlen.cpp` | `strlen` | Compute string length |
+| `strcat.cpp` | `strcat`, `strncat` | Concatenate two strings (full & bounded) |
+| `strcpy-strncpy.cpp` | `strcpy`, `strncpy` | Copy strings (full & bounded) |
+| `strncmp-strncmp.cpp` | `strncmp` | Compare two strings up to *n* characters |
+| `strchrr.cpp` | `strchr` | Find all occurrences of a character in a string |
+
+See [c_string_manipulation/README.md](c_string_manipulation/README.md) for details.
+
+---
 
 ### `linked_list.c/` — Linked Lists
 
@@ -33,6 +53,7 @@ Contains singly, doubly, and circular linked list implementations.
 | `normal__1.1.c` | Singly | Recursive insert, string data (`char*`) |
 | `swapping_nodes.c` | Singly | Swap two nodes by ID |
 | `middle_node.c` | Singly | Find middle node (count & re-traverse) |
+| `shortllist.c` | Singly | Sort by ticket number using bubble sort |
 | `d_normal_ll.c` | Doubly | Insert at end, delete from front/back, forward & backward print |
 | `d_norma_ll2.c` | Doubly | Insert at any position (front/back), delete at any position (front/back) |
 | `c_normal_ll.c` | Circular | Recursive creation, circular traversal |
@@ -41,6 +62,8 @@ Contains singly, doubly, and circular linked list implementations.
 - `normal_ll...` — Singly linked list
 - `d_normal_ll...` — Doubly linked list
 - `c_normal_ll...` — Circular linked list
+
+See [linked_list.c/README.md](linked_list.c/README.md) for details.
 
 ---
 
@@ -55,6 +78,8 @@ Contains singly, doubly, and circular linked list implementations.
 | `circular_queue.c` | Circular queue (array-based) | Enqueue, dequeue (wraparound) |
 | `header.h` | Shared header | Operator stack utilities for infix-postfix |
 
+See [stack_Queue/README.md](stack_Queue/README.md) for details.
+
 ---
 
 ### `trees/` — Tree Data Structures
@@ -65,6 +90,8 @@ Contains singly, doubly, and circular linked list implementations.
 | `bst.c` | Binary search tree | Insert, inorder/preorder/postorder traversal |
 | `bst_2.c` | Binary search tree | Insert, delete (leaf/one-child/two-children), find inorder successor, inorder traversal |
 
+See [trees/README.md](trees/README.md) for details.
+
 ---
 
 ### `sorting/` — Sorting Algorithms
@@ -74,6 +101,8 @@ Contains singly, doubly, and circular linked list implementations.
 | `bubble_sort.c` | Bubble sort | O(n²) | Early-exit optimization (flag-based) |
 | `selection_sort.c` | Selection sort | O(n²) | Standard implementation |
 | `insertion_sort.c` | Insertion sort | O(n²) | Standard implementation |
+
+See [sorting/README.md](sorting/README.md) for details.
 
 ---
 
@@ -94,11 +123,12 @@ See [`go reimplementation/README.md`](go%20reimplementation/README.md) for full 
 
 Quick summary:
 - **`color/`** — ANSI escape code constants package
-- **`linkedlist/`** — Doubly linked list, circular singly linked list, node swapping, middle node (Tortoise & Hare)
+- **`linkedlist/`** — Doubly linked list, circular singly linked list, node swapping, middle node (Tortoise & Hare), recursive singly linked list
+- **`stack_queue/`** — Dynamic stack, Tower of Hanoi, bounded Tower of Hanoi, parenthesis checker, linear queue, circular queue, priority queue, deque
 
 ---
 
 ## Languages Used
 
-- **C** — Primary implementation language
+- **C / C++** — Primary implementation language
 - **Go** — Partial reimplementation with improved algorithms
